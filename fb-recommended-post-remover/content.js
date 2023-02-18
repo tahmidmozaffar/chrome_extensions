@@ -9,6 +9,7 @@ function hide() {
 
 			for (let j = 0; j < spans.length; j++) {
 				const span = spans[j];
+
 				if (span.textContent === "Recommended post") {
 					div.remove();
 					break;
