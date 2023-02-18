@@ -28,6 +28,6 @@ document.addEventListener("scroll", (event) => {
 		timer = setTimeout(() => {
 			hide();
 			timer = null;
-		}, 1 * 1000);
+		}, 2 * 1000);
 	}
 });
