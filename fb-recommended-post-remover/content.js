@@ -1,6 +1,6 @@
 function hide() {
 	const divs = document.querySelectorAll("div");
-  
+
 	for (let i = 0; i < divs.length; i++) {
 		const div = divs[i];
 
@@ -10,17 +10,20 @@ function hide() {
 			for (let j = 0; j < spans.length; j++) {
 				const span = spans[j];
 
-				if (span.textContent === "Recommended post") {
+				if (
+					span.textContent === "Recommended post" ||
+					span.textContent === "Suggested for you"
+				) {
 					div.remove();
 					break;
 				}
 			}
 		}
 	}
-};
+}
 
 window.onload = () => {
-  hide();
+	hide();
 };
 
 var timer = null;
