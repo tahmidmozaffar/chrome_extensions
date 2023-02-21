@@ -1,6 +1,6 @@
 function hide() {
 	const divs = document.querySelectorAll("div");
-
+  
 	for (let i = 0; i < divs.length; i++) {
 		const div = divs[i];
 
@@ -17,9 +17,11 @@ function hide() {
 			}
 		}
 	}
-}
+};
 
-hide();
+window.onload = () => {
+  hide();
+};
 
 var timer = null;
 document.addEventListener("scroll", (event) => {
@@ -27,6 +29,6 @@ document.addEventListener("scroll", (event) => {
 		timer = setTimeout(() => {
 			hide();
 			timer = null;
-		}, 2 * 1000);
+		}, 1 * 1000);
 	}
 });
