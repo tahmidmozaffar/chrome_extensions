@@ -42,7 +42,7 @@ function hide() {
 						span.textContent === "Reels and short videos") ||
 					(option5_state &&
 						span.textContent.includes("shared a memory"))
-				) {
+				) {          
 					div.remove();
 					break;
 				}
