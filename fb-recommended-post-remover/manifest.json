@@ -1,8 +1,8 @@
 {
-	"name": "FB recommended post remover",
-	"version": "1.4",
+	"name": "Facebook Feed Cleaner",
+	"version": "2.0",
 	"manifest_version": 3,
-	"description": "A simple chrome extension that hides recommended posts on Facebook",
+	"description": "A chrome extension that hides unwanted posts on Facebook",
 	"icons": {
 		"16": "images/fb-16.png",
 		"32": "images/fb-32.png",
