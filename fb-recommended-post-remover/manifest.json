@@ -1,18 +1,25 @@
 {
-  "name": "FB recommended post remover",
-  "version": "1.3",
-  "manifest_version": 3,
-  "description": "A simple chrome extension that hides recommended posts on Facebook",
-  "icons": {
-    "16": "images/fb-16.png",
-    "32": "images/fb-32.png",
-    "48": "images/fb-48.png",
-    "128": "images/fb-128.png"
-  },
-  "content_scripts": [
-    {
-      "matches": ["https://www.facebook.com/*"],
-      "js": ["content.js"]
-    }
-  ]
+	"name": "FB recommended post remover",
+	"version": "1.4",
+	"manifest_version": 3,
+	"description": "A simple chrome extension that hides recommended posts on Facebook",
+	"icons": {
+		"16": "images/fb-16.png",
+		"32": "images/fb-32.png",
+		"48": "images/fb-48.png",
+		"128": "images/fb-128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.facebook.com/*"],
+			"js": ["content.js"]
+		}
+	],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": ["storage"],
+	"action": {
+		"default_popup": "popup.html"
+	}
 }
