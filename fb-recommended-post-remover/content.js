@@ -25,7 +25,7 @@ function hide() {
 	for (let i = 0; i < divs.length; i++) {
 		const div = divs[i];
 
-		if (div.hasAttribute("data-pagelet")) {
+		if (div.hasAttribute("data-pagelet") || div.className === "x1lliihq") {
 			const spans = div.querySelectorAll("span");
 
 			for (let j = 0; j < spans.length; j++) {
@@ -54,6 +54,8 @@ function hide() {
 window.onload = () => {
 	hide();
 };
+
+hide();
 
 var timer = null;
 document.addEventListener("scroll", (event) => {
