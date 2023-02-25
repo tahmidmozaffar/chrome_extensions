@@ -32,7 +32,6 @@ function hide() {
 
 	for (let i = 0; i < divs.length; i++) {
 		const div = divs[i];
-		console.log(classnames);
 
 		if (
 			div.hasAttribute("data-pagelet") ||
