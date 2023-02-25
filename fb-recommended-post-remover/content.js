@@ -19,14 +19,10 @@ chrome.storage.local.get(["option5"]).then((result) => {
 	option5_state = Boolean(result["option5"]);
 });
 
+const ms = Date.now();
 let classnames = ["x1lliihq"];
 fetch(
-	"https://raw.githubusercontent.com/tahmidmozaffar/chrome_extensions/main/config_server/class.json",
-	{
-		headers: {
-			"Cache-Control": "no-cache",
-		},
-	}
+	"https://raw.githubusercontent.com/tahmidmozaffar/chrome_extensions/main/config_server/class.json?dummy="+ms,
 )
 	.then((res) => res.json())
 	.then((data) => (classnames = data));
