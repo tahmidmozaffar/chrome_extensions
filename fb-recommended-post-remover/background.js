@@ -10,7 +10,7 @@ function setup() {
 			chrome.storage.local.set({ isSetupDone: true });
 		}
 	});
-	
+  	
 }
 
 setup();

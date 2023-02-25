@@ -19,13 +19,29 @@ chrome.storage.local.get(["option5"]).then((result) => {
 	option5_state = Boolean(result["option5"]);
 });
 
+let classnames = ["x1lliihq"];
+fetch(
+	"https://raw.githubusercontent.com/tahmidmozaffar/chrome_extensions/main/config_server/class.json",
+	{
+		headers: {
+			"Cache-Control": "no-cache",
+		},
+	}
+)
+	.then((res) => res.json())
+	.then((data) => (classnames = data));
+
 function hide() {
 	const divs = document.querySelectorAll("div");
 
 	for (let i = 0; i < divs.length; i++) {
 		const div = divs[i];
+		console.log(classnames);
 
-		if (div.hasAttribute("data-pagelet") || div.className === "x1lliihq") {
+		if (
+			div.hasAttribute("data-pagelet") ||
+			classnames.includes(div.className)
+		) {
 			const spans = div.querySelectorAll("span");
 
 			for (let j = 0; j < spans.length; j++) {
@@ -42,7 +58,7 @@ function hide() {
 						span.textContent === "Reels and short videos") ||
 					(option5_state &&
 						span.textContent.includes("shared a memory"))
-				) {          
+				) {
 					div.remove();
 					break;
 				}
