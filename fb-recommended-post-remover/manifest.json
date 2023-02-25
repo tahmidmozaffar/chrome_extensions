@@ -1,6 +1,6 @@
 {
 	"name": "FB recommended post remover",
-	"version": "2.1",
+	"version": "2.2",
 	"manifest_version": 3,
 	"description": "A chrome extension that hides unwanted posts on Facebook",
 	"icons": {
