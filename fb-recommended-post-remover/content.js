@@ -34,7 +34,7 @@ function hide() {
 		const div = divs[i];
 
 		if (
-			div.hasAttribute("data-pagelet") ||
+			(div.hasAttribute("data-pagelet") && div.getAttribute("data-pagelet").startsWith("FeedUnit")) ||
 			classnames.includes(div.className)
 		) {
 			const spans = div.querySelectorAll("span");
